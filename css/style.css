@@ -1,0 +1,629 @@
+﻿@font-face {
+font-family: 'Roboto Regular';
+src: url(../fonts/roboto-regular.ttf);
+}
+@font-face {
+font-family: 'Roboto Light';
+src: url(../fonts/roboto-light.ttf);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+body {
+    line-height: normal;
+}
+
+h1 {
+    font-family: 'Roboto Regular';
+    color: #ffffff !important;
+    font-size: 2vw;
+}
+
+.container-fluid {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100vw;
+    max-width: 640px;
+    background: #797979 url('../images/background.png');
+    background-size: contain;
+    -webkit-box-shadow: 0px 0px 10px #777, 0px 7px 5px #000;
+	-moz-box-shadow: 0px 0px 10px #777, 0px 7px 5px #000;
+	box-shadow: 0px 0px 10px #777, 0px 7px 5px #000;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 90px;
+    position: relative;
+    background-image: url('../images/background_header.png');
+    background-size: contain;
+}
+
+.header__age {
+    position: absolute;
+    top: 11px;
+    left: -12px;
+}
+
+.header__video {
+    margin-top: 5px;
+    margin-left: 76px !important;
+}
+
+.header__video h1 {
+    font-family: 'Roboto Light';
+    text-transform: uppercase;
+}
+
+.header__tube {
+    margin-top: 16px;
+    margin-left: 6px;
+}
+
+.content {
+    background-image: url('../images/background_content.png');
+    background-size: cover;
+}
+
+.content__videoHd {
+    position: relative;
+    height: 107px;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.heading__hd {
+    position: absolute;
+    top: 14px;
+    left: 23px;
+    color: #ffffff;
+}
+
+.heading__hd h3 {
+    font-size: 27px;
+}
+
+.content__timer {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+.content__settings {
+    position: absolute;
+    top: 30px;
+    left: 14px;
+}
+
+.play__button {
+    margin-top: 198px;
+}
+
+.play__button > button[type="button"] {
+    margin-top: 0;
+    margin-left: 77px;
+    width: 451px; /* Ширина кнопки */
+    height: 192px; /* Высота кнопки */
+    border: none; /* Убираем рамку */
+    background: url(../images/buttun.png) no-repeat; /* Параметры фона */
+    transition: 0.5s ease-out;
+    transform: translateY(0px);
+}
+.play__button > button[type="button"]:hover {
+    background: url(../images/buttun_active.png) no-repeat;
+    transition: 0.5s ease-out;
+    transform: translateY(5px);
+}
+.play__button > button[type="button"]:active {
+    background: url(../images/buttun.png) no-repeat; /* Параметры фона при нажатии */
+}
+/* Убираем рамку в ie и ff */
+.play__button > button[type="button"]:active, button[type="button"]:focus {
+    outline: none;
+}
+.play__button > button[type="button"]::-moz-focus-inner {
+    border: 0;
+}
+
+.content__views {
+    margin-left: 1px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Roboto Regular';
+    letter-spacing: .1px;
+    color: #bababa;
+}
+
+.cancel__button {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cancel__button > input[type="submit"] {
+    margin-top: 29px;
+    margin-left: 0;
+    width: 139px;
+    height: 54px;
+    border: none;
+    background: url(../images/buttun_cancel.png) no-repeat;
+    transition: 0.7s ease-out;
+    -moz-transform: translateY(0px);
+}
+.cancel__button > input[type="submit"]:hover {
+    background: url(../images/buttun_cancel_active.png) no-repeat;
+    transition: 0.7s ease-out;
+    -moz-transform: translateY(3px);
+}
+.cancel__button > input[type="submit"]:active {
+    background: url(../images/buttun_cancel.png) no-repeat;
+}
+.cancel__button > input[type="submit"]:active, input[type="submit"]:focus {
+    outline: none;
+}
+.cancel__button > input[type="submit"]::-moz-focus-inner {
+    border: 0;
+}
+
+.content__ruling {
+    margin-left: 0px;
+    position: relative;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.content__slider {
+    margin-left: -.5vw;
+}
+
+.td {
+    position: relative;
+    display: table-cell;
+}
+
+.content__control1 {
+    margin-top: 15px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+.content__control1:hover img {
+    margin-top: -1px;
+    width: 42px;
+}
+
+.content__control2 {
+    margin-top: 20px;
+    margin-left: 38px;
+    cursor: pointer;
+}
+.content__control2:hover img {
+    margin-top: -1px;
+    width: 46px;
+}
+
+.content__control3 {
+    margin-top: 28px;
+    margin-left: 32px;
+    font-size: 22px;
+    font-family: 'Roboto Regular';
+    color: #ffffff;
+}
+.content__control3 p > span {
+    color: #bababa !important;
+}
+
+.content__control4 {
+    margin-top: 15px;
+    margin-left: 140px !important;
+}
+.content__control4:hover img {
+    margin-top: -1px;
+    width: 57px;
+    cursor: pointer;
+}
+
+.footer__checked {
+    margin-top: 26px;
+    margin-left: -5px;
+}
+
+.footer__checked input[type="checkbox"] {
+    display: none;
+}
+.footer__checked input[type="checkbox"] + label {
+    width: 35px;
+    height: 35px;
+    background: url(../images/checkbox.png) no-repeat;
+}
+.footer__checked input[type="checkbox"] + label:hover {
+    cursor: pointer;
+}
+.footer__checked input[type="checkbox"]:checked + label {
+    width: 35px;
+    height: 35px;
+    background: url(../images/checkbox_active.png) no-repeat;
+}
+
+.footer__rules {
+    margin-top: 29px;
+    margin-left: -47px;
+}
+.footer__rules p {
+    font-size: 22px;
+    font-family: 'Roboto Regular';
+    color: #bababa;
+    line-height: 1.25;
+    letter-spacing: 1px;
+}
+.footer__rules a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.footer__rules a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__text {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.footer__text p {
+    font-size: 22px;
+    font-family: 'Roboto Regular';
+    color: #bababa;
+    line-height: 1.1;
+    letter-spacing: .9px;
+}
+
+
+/* Адаптивный дизайн */
+@media screen and (min-width: 318px) and (max-width: 477px) {
+
+    .header {
+        height: 14vw;
+    }
+
+    .header__age img {
+        width: 8.5vw;
+    }
+
+    .header__video {
+        margin-top: -6px;
+        margin-left: 25px !important;
+    }
+    .header__video h1 {
+        font-size: 7vw;
+    }
+
+    .header__tube {
+        margin-top: 11px;
+        margin-left: 25px;
+    }
+    .header__tube img {
+        width: 14vw;
+    }
+
+    .content__videoHd {
+        height: 10vh;
+    }
+
+    .heading__hd {
+        top: 0;
+        left: 2vw;
+    }
+    .heading__hd h3 {
+        font-size: 5vw;
+    }
+
+    .content__timer {
+        top: 3vh;
+        left: 3vw;
+    }
+    .content__timer img, .content__settings img {
+        width: 7vw;
+    }
+
+    .content__settings {
+        top: 2.9vh;
+        left: -2.7vw;
+    }
+
+    .play__button {
+        margin-top: 92px;
+        text-align: center;
+    }
+    .play__button > button[type="button"],
+        .play__button > button[type="button"]:hover {
+                margin-left: 0;
+                width: 250px;
+                height: 106px;
+                background-size: 250px 106px;
+    }
+
+    .content__views {
+        margin-left: 0;
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    .cancel__button > input[type="submit"],
+        .cancel__button > input[type="submit"]:hover {
+            margin-top: 15px;
+            margin-left: 0;
+            width: 100px;
+            height: 39px;
+            background-size: 100px 39px;
+    }
+
+    .content__ruling {
+        height: 12vh;
+    }
+
+    .content__slider img{
+        width: 100%;
+    }
+
+    .content__control1 img, .content__control2 img,
+        .content__control4 img {
+        width: 7vw;
+    }
+
+    .content__control1 {
+        margin-top: 1vh;
+        margin-left: 0;
+    }
+    .content__control1:hover img {
+        margin-top: -1px;
+        width: 7.2vw;
+    }
+
+    .content__control2 {
+        margin-top: 1.2vh;
+        margin-left: 8vw;
+    }
+    .content__control2:hover img {
+        margin-top: -1px;
+        width: 7.3vw;
+    }
+
+    .content__control3 {
+        margin-top: 1.6vh;
+        margin-left: 11vw;
+        font-size: 3.8vw;
+    }
+
+    .content__control4 {
+        margin-top: 1.3vh;
+        margin-left: 9.5vw !important;
+    }
+    .content__control4:hover img {
+        margin-top: -1px;
+        width: 7.6vw !important;
+    }
+
+    .footer_main {
+        background-image: url('../images/footer_back.png');
+    }
+
+    .footer__checked {
+        margin-top: 4vh;
+        margin-left: -2vw;
+    }
+    .footer__checked input[type="checkbox"] + label,
+        .footer__checked input[type="checkbox"]:checked + label {
+            background-size: contain;
+    }
+
+    .footer__rules {
+        margin-top: -8.4vh;
+        margin-left: 7vw;
+    }
+    .footer__rules p {
+        font-size: 3vw;
+    }
+
+    .footer__text {
+        margin-top: .5vh;
+        margin-left: 0;
+    }
+    .footer__text p {
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (min-width: 412px) and (max-width: 477px) {
+    .footer__rules {
+        margin-top: -6.5vh;
+        margin-left: 9vw;
+    }
+}
+
+@media screen and (min-width: 478px) and (max-width: 637px) {
+
+    .header {
+        height: 14vw;
+    }
+
+    .header__age img {
+        margin-top: .5vh;
+        width: 9vw;
+    }
+
+    .header__video {
+        margin-left: 10vw;
+    }
+    .header__video h1 {
+        margin-top: 1.6vh;
+        font-size: 7vw;
+    }
+
+    .header__tube {
+        margin-top: 1.5vh;
+        margin-left: 6vw;
+    }
+    .header__tube img {
+        width: 14vw;
+    }
+
+    .content__videoHd {
+        height: 83px;
+    }
+
+    .heading__hd {
+        top: .4vh;
+        left: 2vw;
+    }
+    .heading__hd h3 {
+        font-size: 5vw;
+    }
+
+    .content__timer {
+        top: 2.2vh;
+        left: 7vw;
+    }
+    .content__timer img, .content__settings img {
+        width: 7vw;
+    }
+
+    .content__settings {
+        top: 2.1vh;
+        left: .5vw;
+    }
+
+    .play__button {
+        margin-top: 150px;
+        text-align: center;
+    }
+    .play__button > button[type="button"],
+        .play__button > button[type="button"]:hover {
+                margin-left: 0;
+                width: 350px;
+                height: 149px;
+                background-size: 350px 149px;
+    }
+
+    .content__views {
+        margin-left: 0;
+        margin-top: 8px;
+        font-size: 20px;
+    }
+
+    .cancel__button > input[type="submit"],
+        .cancel__button > input[type="submit"]:hover {
+            margin-top: 15px;
+            margin-left: 0;
+            width: 120px;
+            height: 47px;
+            background-size: 120px 47px;
+    }
+
+    .content__ruling {
+        height: 10vh;
+    }
+
+    .content__slider img{
+        width: 100%;
+    }
+
+    .content__control1 img, .content__control2 img,
+        .content__control4 img {
+        width: 7vw;
+    }
+
+    .content__control1 {
+        margin-top: 1.4vh;
+        margin-left: 0;
+    }
+    .content__control1:hover img {
+        margin-top: -1px;
+        width: 7.2vw;
+    }
+
+    .content__control2 {
+        margin-top: 1.6vh;
+        margin-left: 8vw;
+    }
+    .content__control2:hover img {
+        margin-top: -1px;
+        width: 7.3vw;
+    }
+
+    .content__control3 {
+        margin-top: 2.1vh;
+        margin-left: 11vw;
+        font-size: 3.8vw;
+    }
+
+    .content__control4 {
+        margin-top: 2.1vh;
+        margin-left: 16vw !important;
+    }
+    .content__control4:hover img {
+        margin-top: -1px;
+        width: 7.4vw !important;
+    }
+
+    .footer_main {
+        background-image: url('../images/footer_back.png');
+    }
+
+    .footer__checked {
+        margin-top: 4vh;
+        margin-left: -2vw;
+    }
+    .footer__checked input[type="checkbox"] + label,
+        .footer__checked input[type="checkbox"]:checked + label {
+            background-size: contain;
+    }
+
+    .footer__rules {
+        margin-top: -5.5vh;
+        margin-left: 7vw;
+    }
+    .footer__rules p {
+        font-size: 3vw;
+    }
+
+    .footer__text {
+        margin-top: .5vh;
+        margin-left: 0;
+    }
+    .footer__text p {
+        font-size: 3vw;
+    }
+
+}
