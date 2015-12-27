@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="ru" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Тестовая верстка questoria.ru</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+    <!--Bootstrap3-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--Подключаем angular.js в проект-->
+    <script src="scripts/angular.min.js"></script>
+    <!--Подключаем скрипт для поддержки старыми IE6,7,8 элементов html5-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--<header></header>-->
+
+    <main>
+    <div class="container-fluid">
+        <section id="header">
+            <div class="row">
+                <div class="col-xs-12 header">
+                    <div class="col-xs-2 header__age">
+                        <img src="images/12.png" alt="Тестовая верстка questoria.ru">
+                    </div>
+                    <div class="col-xs-2 header__video">
+                        <h1>Video</h1>
+                    </div>
+                    <div class="col-xs-2 header__tube">
+                        <img src="images/tube.png" alt="Тестовая верстка questoria.ru">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="row">
+                <div class="col-xs-12 content">
+                    <div class="row">
+                        <div class="content__videoHd">
+                            <div class="col-xs-4 heading__hd">
+                                <h3>Видео HD</h3>
+                            </div>
+                            <div class="col-xs-offset-4 col-xs-2 content__timer">
+                                <img src="images/timer.gif" alt="Тестовая верстка questoria.ru">
+                            </div>
+                            <div class="col-xs-2 content__settings">
+                                <img src="images/settings.png" alt="Тестовая верстка questoria.ru">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 play__button">
+                            <button type="button" class="btn" ng-disabled="!checked"></button>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-12 content__views">
+                            <p>Просмотров: 14204</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-12 cancel__button">
+                            <input type="submit" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 content__ruling">
+                    <div class="content__slider">
+                        <img src="images/slider.png" alt="Тестовая верстка questoria.ru">
+                    </div>
+                    <div class="col-xs-1 td content__control1">
+                        <img src="images/control1.png" alt="Тестовая верстка questoria.ru">
+                    </div>
+                    <div class="col-xs-1 td content__control2">
+                        <img src="images/control2.png" alt="Тестовая верстка questoria.ru">
+                    </div>
+                    <div class="col-xs-4 td content__control3">
+                        <p>0:01 <span>/ 15:44</span></p>
+                    </div>
+                    <div class="col-xs-1 td content__control4">
+                        <img src="images/control4.png" alt="Тестовая верстка questoria.ru">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="row footer_main">
+                <div class="col-xs-12">
+                    <div class="col-xs-2 footer__checked">
+                        <input id="ch1" type="checkbox" ng-model="checked" ng-init="checked=true">
+                        <label for="ch1"></label>
+                    </div>
+                    <div class="col-xs-11 footer__rules">
+                        <p>Подтверждаю, что люблю мультики, и соглашаюсь с <a href="javascript:void(0);">правилами предоставления услуги</a></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 footer__text">
+                    <p>Услуга: domainname.eu. Провайдер ООО “Эс Эм Экс Комьюникейшнс”. Стоимость: 20 руб в сутки с НДС. </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <!--<footer></footer>-->
+
+  </body>
+</html>
